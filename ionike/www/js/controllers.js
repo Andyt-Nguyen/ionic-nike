@@ -1,10 +1,14 @@
 angular.module('starter.controllers', [])
 
 .controller('FeedController', function($scope, $ionicActionSheet,$timeout) {
+
+		$scope.liked = false;
+		$scope.heartRed = function(){
+			$scope.liked = !$scope.liked;
+		};
+
 	// Triggered on a button click, or some other target
  $scope.show = function() {
-
-	 
 
    // Show the action sheet
    var hideSheet = $ionicActionSheet.show({

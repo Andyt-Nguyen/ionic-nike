@@ -1,5 +1,6 @@
 /* Empty. Add your own CSS if you like */
-@import url('https://fonts.googleapis.com/css?family=Coda:800|Raleway:700');
+@import url('https://fonts.googleapis.com/css?family=Coda:800|Raleway:700|Inknut+Antiqua');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 * {
 	font-family: "Raleway"
 }
@@ -7,11 +8,12 @@
 
 /* First Page OF Feed*/
 .feed-poster-cover {
-	height: 100vh;
+	height: 87vh;
 	background-image: url('/img/nike-seanmalto.jpg');
 	background-size: cover;
 	position: relative;
 }
+
 
 .feed-text {
 	position: absolute;
@@ -54,13 +56,23 @@
 	color: white;
 }
 
+.hearts {
+	font-size: 30px;
+	color: white;
+}
+
+.hearter {
+	color: red;
+}
+
 .feed-share-modal .icon-modal{
 	display: flex;
 	justify-content: space-around;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .feed-share-modal {
-	opacity: 1;
 	background: #ccc;
 }
 
@@ -70,27 +82,29 @@
 }
 
 .feed-face {
-	padding-left: 20px;
-	padding-right: 17px;
+	padding-top: 10px;
+	padding-left: 18px;
+	padding-right: 20px;
+	padding-bottom: 0;
 	background: #3b5998;
 	color: white;
 }
 
 .feed-image {
-	padding-left: 5px;
-	padding-right: 5px;
+	padding: 8px;
+	background: white;
 	color: red;
 }
 
 .feed-chat {
-	padding-left: 5px;
-	padding-right: 5px;
+	padding: 8px;
+	background: white;
 	color: #1fc300;
 }
 
 .feed-instagram {
-	padding-left: 5px;
-	padding-right: 5px;
+	padding: 8px;
+	background: white;
 	color: #000;
 }
 
@@ -103,15 +117,69 @@
 }
 
 .feed {
-	padding: 14px;
-	padding-left: 17px;
-	padding-right: 17px;
+	padding: 12px;
+	background: white;
+	border-radius: 10px;
 }
 
-.feed-plane {
-
-}
 
 .feed-upload {
 	color: #626065;
+}
+.nikesb-logo {
+	position: absolute;
+}
+
+.nikesb-logo img {
+	width: 100px;
+
+}
+
+
+/* Nike Presto Sect*/
+.nike-prestosect {
+	height: 87vh;
+	background-image: url('/img/nikeprestotriplewhite.jpg');
+	background-size: cover;
+}
+
+.buy-shoes {
+	background: transparent;
+	padding: 8px;
+	border: 1px solid #fff;
+	border-radius: 1.5px;
+	color: white;
+	font-weight: 700;
+}
+
+.presto-text-btn h4, .presto-text-btn p{
+	padding: 0;
+	margin: 0;
+	color: #fff;
+}
+
+.presto-text h4 {
+	text-transform: uppercase;
+	font-family: "Oswald";
+	font-weight: 900;
+	padding-top:2px;
+	font-size: 22px;
+}
+
+.presto-text-btn {
+	display: flex;
+	height: 75vh;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.presto-text {
+	order: 2;
+	text-align: right;
+}
+
+.presto-btn {
+	order: 1;
+	display: flex;
+	flex-direction: column;
 }

@@ -1,27 +1,54 @@
 <ion-view view-title="FEED">
   <ion-content>
+
+<!-- NikeSb Sean Malto -->
 		<div class="feed-poster-cover">
 			<div class="feed-text">
 				<h4>Sean Malto Tip</h4>
 				<h1>Ready To OverCrook</h1>
 				<h5>The pro skater gives his advice for his favorite trick</h5>
 			</div>
+			<div class="nikesb-logo">
+				<img src="./img/nikesblogo.png" alt="">
+			</div>
 			<div class="feed-shares">
-
-				<button class="button icon-left button-clear button-dark feed-share-ind">
-					<i class="ion-heart feed-share-ind"></i>
+				<button class="button icon-left button-clear button-dark feed-share-ind" ng-click="heartRed()">
+					<i ng-click="heartRed()" class="ion-heart hearts" ng-class="{'hearter': liked }"></i>
 				</button>
-
 				<button class="button icon-left button-clear button-dark feed-share-ind">
 					<i class="ion-chatbubble-working feed-share-ind"></i>
 				</button>
-
 				<button class="button icon-left button-clear button-dark feed-share-ind" ng-click="show()">
 					<i class="ion-ios-redo feed-share-ind"></i>
 				</button>
+			</div>
+		</div>
+
+	<!-- Nike Presto Triple White -->
+		<section class="nike-prestosect padding">
+			<div class="presto-text-btn">
+
+				<div class="presto-text">
+					<p>Men's Shoes</p>
+					<h4>Nike Presto Green Legion</h4>
+				</div>
+
+				<div class="presto-btn">
+					<button class="buy-shoes">BUY</button>
+					<div>
+						<button class="button icon-left button-clear button-dark feed-share-ind" ng-click="heartRed()">
+							<i ng-click="heartRed()" class="ion-heart hearts" ng-class="{'hearter': liked }"></i>
+						</button>
+						<button class="button icon-left button-clear button-dark feed-share-ind" ng-click="show()">
+							<i class="ion-ios-redo feed-share-ind"></i>
+						</button>
+					</div>
+				</div>
 
 			</div>
 
-		</div>
+		</section>
+
+
   </ion-content>
 </ion-view>
