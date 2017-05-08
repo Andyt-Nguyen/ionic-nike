@@ -9,7 +9,7 @@
 /* First Page OF Feed*/
 .feed-poster-cover {
 	height: 87vh;
-	background-image: url('/img/nike-seanmalto.jpg');
+	background-image: url('../img/nike-seanmalto.jpg');
 	background-size: cover;
 	position: relative;
 }
@@ -139,7 +139,7 @@
 /* Nike Presto Sect*/
 .nike-prestosect {
 	height: 87vh;
-	background-image: url('/img/nikeairpresto.jpg');
+	background-image: url('../img/nikeairpresto.jpg');
 	background-size: cover;
 }
 
