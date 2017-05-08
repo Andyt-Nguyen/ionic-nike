@@ -1,0 +1,117 @@
+/* Empty. Add your own CSS if you like */
+@import url('https://fonts.googleapis.com/css?family=Coda:800|Raleway:700');
+* {
+	font-family: "Raleway"
+}
+
+
+/* First Page OF Feed*/
+.feed-poster-cover {
+	height: 100vh;
+	background-image: url('/img/nike-seanmalto.jpg');
+	background-size: cover;
+	position: relative;
+}
+
+.feed-text {
+	position: absolute;
+	top: 40%;
+	left: 10%;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.feed-text h4, .feed-text h1, .feed-text h5 {
+	text-align: center;
+	color: white;
+	padding: 0;
+	margin: 0;
+}
+
+.feed-text h1, .feed-text h4 {
+	text-transform: uppercase;
+}
+
+.feed-text h1 {
+	font-family: "Coda";
+}
+
+.feed-shares {
+	position: absolute;
+	bottom: 25%;
+	left: 9%;
+}
+
+.feed-shares button {
+	margin: 0;
+	padding: 0;
+}
+
+.feed-share-ind {
+	font-size: 30px;
+	color: white;
+}
+
+.feed-share-modal .icon-modal{
+	display: flex;
+	justify-content: space-around;
+}
+
+.feed-share-modal {
+	opacity: 1;
+	background: #ccc;
+}
+
+.icon-modal i{
+	font-size: 50px;
+	border-radius: 10px;
+}
+
+.feed-face {
+	padding-left: 20px;
+	padding-right: 17px;
+	background: #3b5998;
+	color: white;
+}
+
+.feed-image {
+	padding-left: 5px;
+	padding-right: 5px;
+	color: red;
+}
+
+.feed-chat {
+	padding-left: 5px;
+	padding-right: 5px;
+	color: #1fc300;
+}
+
+.feed-instagram {
+	padding-left: 5px;
+	padding-right: 5px;
+	color: #000;
+}
+
+.icon-modal-bottom {
+	display: flex;
+	justify-content: space-around;
+	padding-top: 2%;
+	font-size: 45px;
+	width: 45%;
+}
+
+.feed {
+	padding: 14px;
+	padding-left: 17px;
+	padding-right: 17px;
+}
+
+.feed-plane {
+
+}
+
+.feed-upload {
+	color: #626065;
+}
