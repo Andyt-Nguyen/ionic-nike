@@ -1,0 +1,116 @@
+<ion-view view-title="PRO TIPS">
+  <ion-content>
+		<div class="feed-poster-cover"></div>
+		<div class="image-profile">
+			<img class="item-profile" src="https://s-media-cache-ak0.pinimg.com/736x/57/af/3e/57af3ed250201a53bb71fa18667ccf23.jpg" alt="">
+			<h3>Sean Malto</h3>
+			<p class="para-grey">Nike Skateboarder</p>
+			<div class="feed-shares-btns">
+				<button class="button icon-left button-clear button-dark feed-share-ind" ng-click="heartRed()">
+					<i ng-click="heartRed()" class="ion-heart" ng-class="{'hearter': liked }"></i>
+				</button>
+				<button class="button icon-left button-clear button-dark feed-share-ind">
+					<i class="ion-chatbubble-working feed-share-ind ion-icon"></i>
+				</button>
+				<button class="button icon-left button-clear button-dark feed-share-ind" ng-click="show()">
+					<i class="ion-ios-redo feed-share-ind ion-icon"></i>
+				</button>
+			</div>
+
+			<div class="skateboard-desc">
+				<h4 class="skateboard-title">Ready To Overcrook</h4>
+				<p class="para-grey">Sometimes simple is best. For Sean Malto the
+					classic overcrook is one
+					of the best tricks there is. The beauty
+					of overcrook is you can go up stuff,
+					down stuff and around stuff too. Before you go for it,
+					be sure you're going fast and check out
+					how slick the rail is.
+					Once you're ready, use Sean's three tips
+					to nail the trick.
+				</p>
+			</div>
+
+			<div>
+				<img src="img/overcrook.jpg" alt="">
+			</div>
+			<div class="skateboard-desc">
+				<h4 class="skateboard-title">Heel side first</h4>
+				<p class="para-grey">
+					Approach any obstacle on your heel side to be in prime
+					position. Once you're there, pop an ollie and turn 45 <sup>o</sup>
+					so the main area of your board makes good contact.
+				</p>
+			</div>
+
+			<div class="skateboard-desc">
+				<h4 class="skateboard-title">Find your balance</h4>
+				<p class="para-grey">
+					Now you're overcrooking, so ride it out. Try to keep your
+					center of gravity straight over the board to balance as long as you can.
+					This is when it's important to know how slick
+					the rail is, becasue you'll need to adjust your balance to cope.
+				</p>
+			</div>
+
+			<div class="skateboard-desc">
+				<h4 class="skateboard-title">Pop out</h4>
+				<p class="para-grey">
+					Every rail is different, so it's on you to know
+					when to pop out and ride away. If the rail enableFriendscleanly, you can just flat off it.
+					But if it doesn't, you'll need to
+					lightly dig with your heels, shimmy
+					your board off and use your momentum to
+					keep on rolling
+				</p>
+			</div>
+			<div>
+				<img src="https://img.clipartfox.com/8e9baa6c4a7bce43d9bedbd4b686dbb1_nike-logo-blue-gallery-nike-logo-clipart-pink_800-600.gif" width="300px;" alt="">
+			</div>
+		</div>
+		<div class="list-stuff">
+			<ion-list>
+			  <ion-item><a style="text-decoration:none; color:black;" href="#/tab/likes">LIKES</a></ion-item>
+			  <ion-item style="color:black">COMMENTS</ion-item>
+			</ion-list>
+			<input ng-click="modal.show()" type="text" placeholder="Add a comment..." style="border: 1px solid #ccc; border-radius:3px; width: 90%; margin-left:2%; margin-top: 3%; margin-bottom:3%; padding: 20px;" class="list-inset">
+			<div class="list">
+				<div class="item item-divider">
+					Comments
+				</div>
+			<ion-list>
+				<ion-item ng-repeat="comment in comments" class="list-inset">
+					<h3><img class="thumb" ng-src="{{comment.thumb}}" alt=""> {{comment.name}}</h3> <span>{{comment.message}}</span>
+				</ion-item>
+			</ion-list>
+			</div>
+
+
+
+
+
+
+			<script id="templates/modal.html" type="text/ng-template">
+	      <ion-modal-view>
+	        <ion-header-bar class="bar bar-header bar-positive">
+	          <h1 class="title">Comment</h1>
+	          <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+	        </ion-header-bar>
+	        <ion-content class="padding">
+						<form ng-submit="createMessage(userMessage)">
+		          <div class="list">
+		            <label class="item item-input">
+		              <span class="input-label"></span>
+		              <input ng-model="userMessage.message" type="text">
+		            </label>
+		            <button type='submit' class="button button-full button-positive">Submit</button>
+		          </div>
+						</form>
+	        </ion-content>
+	      </ion-modal-view>
+	    </script>
+		</div>
+
+
+  </ion-content>
+</ion-view>

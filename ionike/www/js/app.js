@@ -25,20 +25,13 @@ angular.module('NikeApp', ['ionic', 'starter.controllers', 'starter.services'])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
-  // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
-  // Each state's controller can be found in controllers.js
   $stateProvider
 
-  // setup an abstract state for the tabs directive
-    .state('tab', {
+  .state('tab', {
     url: '/tab',
     abstract: true,
     templateUrl: 'templates/tabs.html'
   })
-
-  // Each tab has its own nav history stack:
 
   .state('tab.feed', {
     url: '/feed',
@@ -46,6 +39,26 @@ angular.module('NikeApp', ['ionic', 'starter.controllers', 'starter.services'])
       'tab-feed': {
         templateUrl: 'templates/tab-feed.html',
         controller: 'FeedController'
+      }
+    }
+  })
+
+	.state('tab.protips', {
+    url: '/protips',
+    views: {
+      'tab-feed': {
+        templateUrl: 'templates/tab-seanmalto.html',
+				controller: 'FeedController'
+      }
+    }
+  })
+
+	.state('tab.likes', {
+    url: '/likes',
+    views: {
+      'tab-feed': {
+        templateUrl: 'templates/tab-likes.html',
+				controller: 'FeedController'
       }
     }
   })

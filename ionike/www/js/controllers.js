@@ -1,10 +1,11 @@
 angular.module('starter.controllers', [])
 
-.controller('FeedController', function($scope, $ionicActionSheet,$timeout) {
+.controller('FeedController', function($scope, $ionicActionSheet,$timeout, $ionicModal) {
 
 		$scope.liked = false;
 		$scope.heartRed = function(){
 			$scope.liked = !$scope.liked;
+			console.log($scope.liked);
 		};
 
 	// Triggered on a button click, or some other target
@@ -26,7 +27,6 @@ angular.module('starter.controllers', [])
        return true;
      },
 		 cssClass: 'feed-share-modal'
-
    });
 
    // For example's sake, hide the sheet after two seconds
@@ -35,16 +35,55 @@ angular.module('starter.controllers', [])
    }, 5000);
 
  };
+
+ //Comments Below
+ 	$scope.comments = [
+		{name:'John Long Silver', message:'That was so sick', thumb:'http://vignette3.wikia.nocookie.net/pirates/images/7/70/Jack_Sparrow.JPG/revision/latest?cb=20121118005724'},
+		{name: 'Oprah', message: 'Free skateboards for everyone', thumb:'http://static.oprah.com/images/tows/201104/20110413-oprah-whiteshirt-600x411.jpg'}
+	];
+
+
+	$scope.createMessage = function(userMessage){
+		$scope.comments.push({
+			name: "Anonymous",
+			message: userMessage.message,
+			thumb:"http://www.shannonillinois.com/wp-content/uploads/2015/11/default_staffmale.jpg"
+		});
+
+		$scope.modal.hide();
+
+
+		console.log($scope.userMessage);
+	}
+
+	  $ionicModal.fromTemplateUrl('templates/modal.html', {
+	    scope: $scope,
+	    animation: 'slide-in-up'
+	  }).then(function(modal) {
+	    $scope.modal = modal;
+	  });
+	  $scope.openModal = function() {
+	    $scope.modal.show();
+	  };
+	  $scope.closeModal = function() {
+	    $scope.modal.hide();
+	  };
+	  // Cleanup the modal when we're done with it!
+	  $scope.$on('$destroy', function() {
+	    $scope.modal.remove();
+	  });
+	  // Execute action on hide modal
+	  $scope.$on('modal.hidden', function() {
+	    // Execute action
+	  });
+	  // Execute action on remove modal
+	  $scope.$on('modal.removed', function() {
+	    // Execute action
+	  });
+
 })
 
 .controller('MyStoreController', function($scope, Chats) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
 
   $scope.chats = Chats.all();
   $scope.remove = function(chat) {
