@@ -7,13 +7,13 @@
 			<p class="para-grey">Nike Skateboarder</p>
 			<div class="feed-shares-btns">
 				<button class="button icon-left button-clear button-dark feed-share-ind" ng-click="heartRed()">
-					<i ng-click="heartRed()" class="ion-heart" ng-class="{'hearter': liked }"></i>
+					<i ng-model="liked" class="ion-heart hearts" ng-class="{'hearter': liked }"></i>
 				</button>
 				<button class="button icon-left button-clear button-dark feed-share-ind">
-					<i class="ion-chatbubble-working feed-share-ind ion-icon"></i>
+					<i class="ion-chatbubble-working feed-share-ind ion-icon" style="color:#9a9a9c"></i>
 				</button>
 				<button class="button icon-left button-clear button-dark feed-share-ind" ng-click="show()">
-					<i class="ion-ios-redo feed-share-ind ion-icon"></i>
+					<i class="ion-ios-redo feed-share-ind ion-icon" style="color:#9a9a9c"></i>
 				</button>
 			</div>
 
@@ -70,8 +70,7 @@
 		</div>
 		<div class="list-stuff">
 			<ion-list>
-			  <ion-item><a style="text-decoration:none; color:black;" href="#/tab/likes">LIKES</a></ion-item>
-			  <ion-item style="color:black">COMMENTS</ion-item>
+			 	<a style="text-decoration:none; color:black;" href="#/tab/likes"><ion-item style="color:black;">LIKES</ion-item></a>
 			</ion-list>
 			<input ng-click="modal.show()" type="text" placeholder="Add a comment..." style="border: 1px solid #ccc; border-radius:3px; width: 90%; margin-left:2%; margin-top: 3%; margin-bottom:3%; padding: 20px;" class="list-inset">
 			<div class="list">
@@ -79,8 +78,8 @@
 					Comments
 				</div>
 			<ion-list>
-				<ion-item ng-repeat="comment in comments" class="list-inset">
-					<h3><img class="thumb" ng-src="{{comment.thumb}}" alt=""> {{comment.name}}</h3> <span>{{comment.message}}</span>
+				<ion-item ng-repeat="comment in comments" class="list-inset item-text-wrap">
+					<h3><img class="thumb" ng-src="{{comment.thumb}}" alt=""> {{comment.name}}</h3> <p>{{comment.message}}</p>
 				</ion-item>
 			</ion-list>
 			</div>

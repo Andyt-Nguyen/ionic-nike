@@ -1,7 +1,12 @@
 <ion-view view-title="LIKES">
   <ion-content class="padding">
 		<ion-list class="list">
-			<ion-item class=""></ion-item>
+			<ion-item ng-repeat="comment in comments" ng-show="comment.liked">
+				<a class="item-icon-right" style="text-decoration:none; color:lightgreen">
+					<img ng-src="{{comment.thumb}}" class="thumb" alt="">
+					{{comment.name}}
+				</a>
+			</ion-item>
 
 		</ion-list>
   </ion-content>
