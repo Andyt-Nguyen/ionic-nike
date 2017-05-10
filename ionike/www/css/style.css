@@ -223,3 +223,30 @@ a {
 	width:54px;
 	border-radius: 50%;
 }
+
+
+/*My Store*/
+.mystore {
+	display: flex;
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: center;
+
+
+}
+
+.mystore img {
+	padding: 2%;
+	height: 180px;
+	width: 178px;
+}
+
+.mystore h5 p{
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+.mystore p{
+	color: #ccc;
+}

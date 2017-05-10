@@ -1,5 +1,26 @@
 <ion-view view-title="MY STORE">
   <ion-content>
-		Add Products Here
+		<div>
+			<div class="list">
+				<ion-item style="color:black">THIS WEEK'S PICK</ion-item>
+				<img width="400px" src="https://s-media-cache-ak0.pinimg.com/736x/a2/e8/79/a2e879949c37db76443e179a027b69a0.jpg" alt="">
+				<h5 class="padding">Nike Sb Stefan Janoski $70</h5>
+			</div>
+			<div class='list mystore'>
+				<div ng-repeat="shoes in nikeSb">
+					<img ng-src="{{shoes.img}}" alt="">
+					<h5 style="padding: 0;
+					margin: 0;">{{shoes.name}}</h5>
+					<p style="padding: 0;
+					margin: 0;">{{shoes.price|currency}}</p>
+				</div>
+			</div>
+			<div class="list">
+				<h4>SHOP BY FAVORITES</h4>
+				<div ng-repeat="images in nikeCateg">
+					<img ng-src="{{images.img}}" alt="">
+				</div>
+			</div>
+		</div>
   </ion-content>
 </ion-view>

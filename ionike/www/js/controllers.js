@@ -85,15 +85,27 @@ angular.module('starter.controllers', [])
 })
 
 .controller('MyStoreController', function($scope, Chats) {
+	$scope.nikeSb = [
+		{name:'Stefan Janoski Hyper',img:'img/sjhyper.png', price:89},
+		{name:'Stafan Janoski iD', img:'img/sjid.png',price: 74},
+		{name:'Stefan Janoski Max',img:'img/sjmax.png', price: 90},
+		{name:'Stefan Janoski Slips', img:'img/sjslip.png', price: 120}
+	];
 
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };
+	$scope.nikeCateg = [
+		{img:'img/running.png'},
+		{img:'img/lifestyle.png'},
+		{img:'img/training.png'}
+	];
+
 })
 
 .controller('ServicesController', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
-});
+	$scope.nikeServPics = [
+		{img:'img/expert.png'},
+		{img:'img/event.png'},
+		{img:'img/support.png'},
+		{img:'img/store.png'},
+		{img:'img/apps.png'}
+	]
+})

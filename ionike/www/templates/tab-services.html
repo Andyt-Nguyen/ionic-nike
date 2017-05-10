@@ -1,9 +1,9 @@
-<ion-view view-title="Account">
+<ion-view view-title="Services">
   <ion-content>
     <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
+			<div ng-repeat="services in nikeServPics">
+				<img ng-src="{{services.img}}" alt="">
+			</div>
     </ion-list>
   </ion-content>
 </ion-view>
