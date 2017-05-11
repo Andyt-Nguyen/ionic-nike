@@ -1,6 +1,20 @@
 angular.module('starter.controllers', [])
 
-.controller('FeedController', function($scope, $ionicActionSheet,$timeout, $ionicModal) {
+.controller('FeedController', function($scope, $ionicActionSheet,$timeout, $ionicModal,$ionicLoading) {
+	$scope.show = function() {
+    $ionicLoading.show({
+      templateUrl: '/templates/coverPageFeed.html',
+      duration: 5000
+    }).then(function(){
+       console.log("The loading indicator is now displayed");
+    });
+  }();
+  $scope.hide = function(){
+    $ionicLoading.hide().then(function(){
+       console.log("The loading indicator is now hidden");
+    });
+  };
+
 
 		$scope.liked;
 		$scope.heartRed = function(){
@@ -84,20 +98,30 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('MyStoreController', function($scope, Chats) {
-	$scope.nikeSb = [
-		{name:'Stefan Janoski Hyper',img:'img/sjhyper.png', price:89},
-		{name:'Stafan Janoski iD', img:'img/sjid.png',price: 74},
-		{name:'Stefan Janoski Max',img:'img/sjmax.png', price: 90},
-		{name:'Stefan Janoski Slips', img:'img/sjslip.png', price: 120}
-	];
-
+.controller('MyStoreController', function($scope, NikeSb,$ionicLoading) {
+	$scope.show = function() {
+    $ionicLoading.show({
+      template: 'Loading...',
+      duration: 3000
+    }).then(function(){
+       console.log("The loading indicator is now displayed");
+    });
+  }();
+  $scope.hide = function(){
+    $ionicLoading.hide().then(function(){
+       console.log("The loading indicator is now hidden");
+    });
+  }();
+	$scope.nikeSb = NikeSb.all();
 	$scope.nikeCateg = [
 		{img:'img/running.png'},
 		{img:'img/lifestyle.png'},
 		{img:'img/training.png'}
 	];
+})
 
+.controller('ProductDetailController', function($scope,$stateParams,NikeSb){
+	$scope.nikeSb = NikeSb.get($stateParams.shoeId)
 })
 
 .controller('ServicesController', function($scope) {
@@ -107,5 +131,15 @@ angular.module('starter.controllers', [])
 		{img:'img/support.png'},
 		{img:'img/store.png'},
 		{img:'img/apps.png'}
-	]
+	];
 })
+
+.controller('InboxController', function($scope,NikeMessage,$stateParams){
+	$scope.messages = NikeMessage.all();
+
+	$scope.currentMessage = NikeMessage.get($stateParams.messageId)
+
+	$scope.remove = function(message){
+		NikeMessage.remove(message);
+	};
+});

@@ -1,0 +1,56 @@
+<!-- <div class="products-sect">
+	<img src="{{nikeSb[0].img}}" alt="">
+	<div>
+		<h4>{{nikeSb[0].name}}</h4>
+		<h5>{{nikeSb[0].price | currency}}</h5>
+	</div>
+</div> -->
+
+<ion-view view-title="Shoes">
+  <ion-content>
+		<section class="productview-sect padding">
+
+	<!-- <div class="productview-mini-pics">
+		<img width='63px' ng-src="{{nikeSb[0].img}}" alt="">
+	</div> -->
+
+	<div class="productview-main-pic">
+		<img ng-src="{{nikeSb.img}}" alt="">
+	</div>
+
+	<div class="productview-desc-sect">
+		<div class="productview-desc">
+			<div class="productview-text">
+				<h3>{{nikeSb.name}}</h3>
+				<h4>{{nikeSb.price | currency}}</h4>
+			</div>
+
+			<!-- <div class="productview-desc-rating">
+				<img src="views/productsviews/productinfoview/img/rating.png" alt="">
+			</div> -->
+		</div>
+
+
+
+		<hr>
+
+
+		<div class="mini-desc">
+			<p class="mini-desc-p">{{nikeSb[0].name}}</p>
+			<p class="mini-desc-style">Style: 242987-003</p>
+		</div>
+
+<!-- Mini Image -->
+
+
+<!-- Buttons Size/AddCart -->
+		<div class="productview-mini-buttons">
+			<form ng-submit="buyProduct(singleItem.product)">
+				<button class="product-view-cart">Add To Cart</button>
+			</form>
+		</div>
+	</div>
+</section>
+
+  </ion-content>
+</ion-view>

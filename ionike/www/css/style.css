@@ -85,10 +85,9 @@ a {
 }
 
 .feed-face {
-	padding-top: 4px;
+	padding-top: 10px;
 	padding-left: 18px;
 	padding-right: 15px;
-	padding-bottom: 3px;
 	background: #3b5998;
 	color: white;
 }
@@ -249,4 +248,96 @@ a {
 
 .mystore p{
 	color: #ccc;
+}
+
+.products-sect{
+	display: flex;
+}
+
+
+/*Product View*/
+.sections {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.productview-sect {
+	display: flex;
+	justify-content: center;
+}
+
+.productview-mini-pics img{
+	padding-top: 20px;
+}
+
+.productview-main-pic img{
+	padding: 20px;
+}
+
+.productview-desc-sect {
+	width: 30%;
+	flex-direction: column;
+}
+.productview-desc {
+	display: flex;
+	justify-content: center;
+}
+
+.productview-text {
+	width: 100%;
+}
+
+.productview-desc-rating {
+	width: 100%;
+	padding-top: 18%;
+}
+
+.mini-desc {
+	display: flex;
+	color: #ccc;
+	font-size: 10px;
+}
+
+.mini-desc-p {
+	flex: 1;
+}
+
+.mini-desc-style {
+	flex:1;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.productview-mini-buttons {
+	margin-top:20px;
+	display: flex;
+	justify-content: center;
+}
+
+.productview-mini-buttons button {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px;
+	margin: 3px;
+	border-radius: 2px;
+}
+
+
+.product-view-size {
+	flex:1;
+	display: flex;
+	justify-content: center;
+	background: #dddddd;
+	border: #dddddd;
+	color: #b6b6b6;
+}
+
+.product-view-cart {
+	flex:1;
+	display: flex;
+	justify-content: center;
+	background: #fa5400;
+	border:#fa5400;
+	color: white;
 }

@@ -1,5 +1,5 @@
 <ion-view view-title="PRO TIPS">
-  <ion-content>
+  <ion-content class="padding">
 		<div class="feed-poster-cover"></div>
 		<div class="image-profile">
 			<img class="item-profile" src="https://s-media-cache-ak0.pinimg.com/736x/57/af/3e/57af3ed250201a53bb71fa18667ccf23.jpg" alt="">
@@ -78,8 +78,10 @@
 					Comments
 				</div>
 			<ion-list>
-				<ion-item ng-repeat="comment in comments" class="list-inset item-text-wrap">
-					<h3><img class="thumb" ng-src="{{comment.thumb}}" alt=""> {{comment.name}}</h3> <p>{{comment.message}}</p>
+				<ion-item ng-repeat="comment in comments" class="list-inset item-text-wrap item-avatar">
+					<img ng-src="{{comment.thumb}}" alt="">
+					 <h3>{{comment.name}}</h3>
+					 <p>{{comment.message}}</p>
 				</ion-item>
 			</ion-list>
 			</div>

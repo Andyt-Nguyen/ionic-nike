@@ -73,6 +73,16 @@ angular.module('NikeApp', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
+		.state('tab.products', {
+	      url: '/products/:shoeId',
+	      views: {
+	        'tab-mystore': {
+	          templateUrl: 'templates/tab-productpage.html',
+	          controller: 'ProductDetailController'
+	        }
+	      }
+	    })
+
   .state('tab.services', {
     url: '/services',
     views: {
@@ -87,10 +97,21 @@ angular.module('NikeApp', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/inbox',
     views: {
       'tab-inbox': {
-        templateUrl: 'templates/tab-inbox.html'
+        templateUrl: 'templates/tab-inbox.html',
+				controller:'InboxController'
       }
     }
-  });
+  })
+
+	.state('tab.messages', {
+			url: '/messages/:messageId',
+			views: {
+				'tab-inbox': {
+					templateUrl: 'templates/tab-messages.html',
+					controller: 'InboxController'
+				}
+			}
+		})
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/feed');
